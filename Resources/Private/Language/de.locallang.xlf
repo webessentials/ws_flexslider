@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" product-name="ws_flexslider">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="address2">
 		<header/>
 		<body>
 
@@ -84,7 +84,7 @@
 				<target>Beginnen bei</target>
 			</trans-unit>
 			<trans-unit id="ff.slideshow" xml:space="preserve">
-				<target>Slideshow Modus</target>
+				<target>Automatisches Abspielen</target>
 			</trans-unit>
 			<trans-unit id="ff.slideshowSpeed" xml:space="preserve">
 				<target>Geschwindigkeit der Slideshow (in Millisekunden)</target>
@@ -200,10 +200,9 @@
 			<trans-unit id="nextText" xml:space="preserve">
 				<target>Weiter</target>
 			</trans-unit>
-			<trans-unit id="more" xml:space="preserve">
-				<target>Mehr</target>
+			<trans-unit id="learn_more" xml:space="preserve">
+				<target>Mehr erfahren</target>
 			</trans-unit>
-
 		</body>
 	</file>
 </xliff>

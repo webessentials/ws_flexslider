@@ -33,9 +33,7 @@ return [
     'types' => [
         '1' => [
             'showitem' => 'hidden, title, sys_language_uid,
-				description,
-				textposition, styleclass, link, fal_image,
-		
+				description,link, fal_image,
 				--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,starttime, endtime'
         ],
     ],
@@ -140,50 +138,6 @@ return [
                 'cols' => 40,
                 'rows' => 6,
                 'enableRichtext' => true,
-            ],
-        ],
-        'textposition' => [
-            'exclude' => 0,
-            'label' => 'LLL:EXT:ws_flexslider/Resources/Private/Language/locallang_db.xlf:tx_wsflexslider_domain_model_image.textposition',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    [
-                        'LLL:EXT:ws_flexslider/Resources/Private/Language/locallang_db.xlf:tx_wsflexslider_domain_model_image.textposition_left',
-                        "left"
-                    ],
-                    [
-                        'LLL:EXT:ws_flexslider/Resources/Private/Language/locallang_db.xlf:tx_wsflexslider_domain_model_image.textposition_right',
-                        "right"
-                    ]
-                ],
-            ],
-        ],
-        'styleclass' => [
-            'exclude' => 0,
-            'label' => 'LLL:EXT:ws_flexslider/Resources/Private/Language/locallang_db.xlf:tx_wsflexslider_domain_model_image.styleclass',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    [
-                        'LLL:EXT:ws_flexslider/Resources/Private/Language/locallang_db.xlf:tx_wsflexslider_domain_model_image.styleclass_style1',
-                        "style1"
-                    ],
-                    [
-                        'LLL:EXT:ws_flexslider/Resources/Private/Language/locallang_db.xlf:tx_wsflexslider_domain_model_image.styleclass_style2',
-                        "style2"
-                    ],
-                    [
-                        'LLL:EXT:ws_flexslider/Resources/Private/Language/locallang_db.xlf:tx_wsflexslider_domain_model_image.styleclass_style3',
-                        "style3"
-                    ],
-                    [
-                        'LLL:EXT:ws_flexslider/Resources/Private/Language/locallang_db.xlf:tx_wsflexslider_domain_model_image.styleclass_style4',
-                        "style4"
-                    ]
-                ],
             ],
         ],
         'link' => [

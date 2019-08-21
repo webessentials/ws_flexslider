@@ -37,24 +37,24 @@ class AddJsFooterInlineCodeViewHelper extends AbstractTagBasedViewHelper {
 		$this->registerArgument('compress', 'boolean', 'Compress argument - see PageRenderer documentation', FALSE, TRUE);
 		$this->registerArgument('forceOnTop', 'boolean', 'ForceOnTop argument - see PageRenderer documentation', FALSE, FALSE);
 	}
-	
+
 	/**
 	 * @var \TYPO3\CMS\Core\Page\PageRenderer
 	 */
 	protected $pageRenderer;
-	
+
 	/**
 	 * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface
 	 */
 	protected $configurationManager;
-	
+
 	/**
 	 * @param \TYPO3\CMS\Core\Page\PageRenderer $pageRenderer
 	 */
 	public function injectPageRenderer(\TYPO3\CMS\Core\Page\PageRenderer $pageRenderer) {
 		$this->pageRenderer = $pageRenderer;
 	}
-	
+
 	/**
 	 * @param \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager
 	 * @return void
@@ -62,8 +62,8 @@ class AddJsFooterInlineCodeViewHelper extends AbstractTagBasedViewHelper {
 	public function injectConfigurationManager(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager) {
 		$this->configurationManager = $configurationManager;
 	}
-	
-	
+
+
 	/**
 	 * Returns TRUE if what we are outputting may be cached
 	 *
@@ -73,8 +73,8 @@ class AddJsFooterInlineCodeViewHelper extends AbstractTagBasedViewHelper {
 		$userObjType = $this->configurationManager->getContentObject()->getUserObjectType();
 		return ($userObjType !== ContentObjectRenderer::OBJECTTYPE_USER_INT);
 	}
-	
-	
+
+
 	/**
 	 * Render
 	 *
@@ -83,7 +83,7 @@ class AddJsFooterInlineCodeViewHelper extends AbstractTagBasedViewHelper {
 	public function render() {
 		$block = $this->renderChildren();
 
-		
+
 		if ($this->isCached()) {
 			$this->pageRenderer->addJsFooterInlineCode(
 					$this->arguments['name'],
@@ -96,5 +96,5 @@ class AddJsFooterInlineCodeViewHelper extends AbstractTagBasedViewHelper {
 			$GLOBALS['TSFE']->additionalFooterData[md5($this->arguments['name'])] = GeneralUtility::wrapJS($block);
 		}
 	}
-	
+
 }

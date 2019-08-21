@@ -1,4 +1,5 @@
 <?php
+
 namespace WapplerSystems\WsFlexslider\Domain\Model;
 
 /**
@@ -13,11 +14,8 @@ namespace WapplerSystems\WsFlexslider\Domain\Model;
  *
  * The TYPO3 project - inspiring people to share!
  */
-    
-    
+
 /**
- *
- *
  * @package ws_flexslider
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
@@ -26,62 +24,35 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
     /**
-     * title
-     *
      * @var string
      */
     protected $title;
 
     /**
-     * description
-     *
      * @var string
      */
     protected $description;
 
 
     /**
-     * image
-     *
      * @var string
      */
     protected $image;
 
 
     /**
-     * Fal image
-     *
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
      */
     protected $falImage;
 
     /**
-     * textposition
-     *
-     * @var string
-     * @validate NotEmpty
-     */
-    protected $textposition;
-
-    /**
-     * styleclass
-     *
-     * @var string
-     * @validate NotEmpty
-     */
-    protected $styleclass;
-
-
-    /**
-     * link
-     *
      * @var string
      */
     protected $link;
 
+
+
     /**
-     * Returns the title
-     *
      * @return string $title
      */
     public function getTitle()
@@ -121,7 +92,6 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->description = $description;
     }
 
-
     /**
      * Returns the image
      *
@@ -142,7 +112,6 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->image = $image;
     }
-
 
     /**
      * Returns the image
@@ -165,51 +134,6 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->falImage = $falImage;
     }
 
-
-    /**
-     * Returns the text position
-     *
-     * @return string $textposition
-     */
-    public function getTextposition()
-    {
-        return $this->textposition;
-    }
-
-    /**
-     * Sets the text position
-     *
-     * @param string $textposition
-     * @return void
-     */
-    public function setTextposition($textposition)
-    {
-        $this->textposition = $textposition;
-    }
-
-
-    /**
-     * Returns the style class
-     *
-     * @return string $styleclass
-     */
-    public function getStyleclass()
-    {
-        return $this->styleclass;
-    }
-
-    /**
-     * Sets the style class
-     *
-     * @param string $styleclass
-     * @return void
-     */
-    public function setStyleclass($styleclass)
-    {
-        $this->styleclass = $styleclass;
-    }
-
-
     /**
      * Returns the link
      *
@@ -230,7 +154,4 @@ class Image extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->link = $link;
     }
-
 }
-
-?>
